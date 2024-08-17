@@ -57,6 +57,5 @@ int main(void)
         cin >> x;
         cout << calc(y, x) << "\n";
     }
-    // cout << calc(2,3) << "\n";
     return 0;
 }
