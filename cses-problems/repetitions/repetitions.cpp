@@ -4,11 +4,12 @@ using namespace std;
 
 int main()
 {
-    string dna;
-    cin >> dna;
+	string dna;
+	cin >> dna;
     long int max;
     long int count = 1;
     int string_length = dna.length();
+
     for(int i = 0; i < string_length; ++i)
     {
         if(dna[i] == dna[i + 1])
