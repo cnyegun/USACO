@@ -19,20 +19,15 @@ int main () {
   sort(D.begin(), D.end()); 
 
   int ret = 0;
+  int j = 0;
 
   for (int i = 0; i < n; i++) {
     // start searching : how many can I choose starting from this position
-    int _ret = 1;
-
-    for (int j = i + 1; j < n; j++) {
-      if (abs(D[i] - D[j]) <= k)
-        _ret++;
+    while (j < n && D[j] - D[i] <= k) {
+      j++;
     }
-
-    if (_ret > ret)
-      ret = _ret;
+    ret = max(ret, j - i);
   }
-
 
   cout << ret << '\n';
   return 0;
